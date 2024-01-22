@@ -3,11 +3,10 @@ import React, { useEffect, useState } from 'react'
 import WOW from 'wowjs'
 import logo from '../../assets/images/logo-dark.svg';
 import flagtr from '../../assets/images/resources/flag-tr.svg'
-import flagen from '../../assets/images/resources/flag-en.svg'
+
 
 const Navbar = () => {
     const [mobile, setmobile] = useState(false)
-    const [search, setsearch] = useState(false)
     const location = useLocation()
     const path = location.pathname
     const [menu, setmenu] = useState({})

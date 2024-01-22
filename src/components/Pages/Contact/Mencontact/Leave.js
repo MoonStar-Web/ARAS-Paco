@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { Link}  from 'react-router-dom'
 //languages
 //notify
-import { ToastContainer, notifySuccess, notifyError } from "../../../../utils/toast";
+import { ToastContainer,notifySuccess, notifyError } from "../../../../utils/toast";
 
 const Leave = () => {
 
@@ -71,7 +71,7 @@ const Leave = () => {
                         <div className="col-md-12">
                             <textarea name="message" placeholder="Mesaj Yaz"></textarea>
                             <button className="thm-btn" type="submit">Mesaj Gönder</button>
-                            <ToastContainer />
+                            <ToastContainer/>
                         </div>
                     </div>
                 </form>

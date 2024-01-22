@@ -25,7 +25,7 @@ function Video() {
                         <div className="mfp-container mfp-s-ready mfp-iframe-holder">
                             <div className="mfp-content">
                                 <div className="mfp-iframe-scaler">
-                                    <button title="Close (Esc)" type="button" className="mfp-close" onClick={() => setytShow(false)}>×</button>
+                                    <button title="Close (Esc)" type="button" className="mfp-close" onClick={() => setytShow(false)}>x</button>
                                     <iframe className="mfp-iframe" src="//www.youtube.com/embed/fKjTmTVqnG8?autoplay=1" frameborder="0" allowFullScreen=""></iframe>
                                 </div>
                             </div>
