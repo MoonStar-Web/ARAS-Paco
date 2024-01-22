@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Route, Routes, useLocation } from 'react-router-dom'
+import {  Route, Routes, useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar/Main'
 import Footer from '../components/Footer/Main'
 import Home from '../components/Pages/Home/Main'
@@ -9,8 +9,7 @@ import ServiceDetails from '../components/Pages/Services/ServiceDetails/Main'
 import FAQ from '../components/Pages/FAQ/Main'
 import Testimonials from '../components/Pages/Testimonial/Main'
 import Contact from '../components/Pages/Contact/Main'
-import NotFound from '../components/Pages/NotFound'
-
+import NotFound from '../components/Pages/404/NotFound'
 
 
 const Routing = () => {
@@ -26,7 +25,7 @@ const Routing = () => {
     
     return (
         <>
-        
+      
             {homepage && <Navbar />}
             
             <Routes>
@@ -42,7 +41,7 @@ const Routing = () => {
                 <Route path='*' element={<NotFound />} />
             </Routes>
             <Footer />
-            
+           
            
         </>
     )

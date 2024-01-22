@@ -2,6 +2,8 @@ import { Link, useLocation }  from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import WOW from 'wowjs'
 import logo from '../../assets/images/logo-dark.svg';
+import flagtr from '../../assets/images/resources/flag-tr.svg'
+import flagen from '../../assets/images/resources/flag-en.svg'
 
 const Navbar = () => {
     const [mobile, setmobile] = useState(false)
@@ -135,7 +137,7 @@ const Navbar = () => {
                 <ul  className="mobile-nav__contact list-unstyled">
                     <li>
                         <i  className="pylon-icon-email1"></i>
-                        < Link to="mailto:info@eksperendüstriyel.com.tr">info@eksperendüstriyel.com.tr</Link>
+                        <Link to="mailto:info@eksperendüstriyel.com.tr">info@eksperendüstriyel.com.tr</Link>
                     </li>
                     <li>
                         <i  className="pylon-icon-telephone"></i>
@@ -144,11 +146,11 @@ const Navbar = () => {
                 </ul>
                 <div  className="mobile-nav__top">
                     <div  className="mobile-nav__language">
-                        <img src="assets/images/resources/flag-1-1.jpg" alt=""/>
+                        <img src={flagtr} alt=""/>
                         <label  className="sr-only" htmlFor="language-select">Dil seçin</label>
                         <select  className="selectpicker" id="language-select">
-                            <option value="english">English</option>
-                            <option value="arabic">Arabic</option>
+                            <option value="tr">Türkçe</option>
+                            <option value="en">English</option>
                         </select>
                     </div>
                     <div  className="mobile-nav__social">
@@ -157,20 +159,6 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
-
-        <div  className={`search-popup ${search && "active"}`}>
-            <div  className="search-popup__overlay search-toggler" onClick={() => setsearch(false)}></div>
-            <div  className="search-popup__content">
-                <form action="#">
-                    <label htmlFor="search"  className="sr-only">burada ara</label>
-                    <input type="text" id="search" placeholder="burada ara..." />
-                    <button type="submit" aria-label="search submit"  className="thm-btn">
-                        <i  className="fa fa-search"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
-    
     </>
   )
 }

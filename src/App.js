@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes } from "react-router-dom"
+import { BrowserRouter as Router } from "react-router-dom"
 import Routing from './routes';
 import './assets/css/animate.min.css' 
 // import './assets/css/bootstrap.min.css'
