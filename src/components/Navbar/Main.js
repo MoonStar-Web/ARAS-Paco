@@ -2,10 +2,26 @@ import { Link, useLocation }  from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import WOW from 'wowjs'
 import logo from '../../assets/images/logo-dark.svg';
-import flagtr from '../../assets/images/resources/flag-tr.svg'
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
+import cookies from 'js-cookie';
 
 
 const Navbar = () => {
+
+    const languages = [
+        {
+          code: 'TR',
+          name: 'Türkçe',
+          country_code: 'tr', 
+        },
+        {
+          code: 'EN',
+          name: 'English',
+          country_code: 'gb',
+        },
+      ]
+       
     const [mobile, setmobile] = useState(false)
     const location = useLocation()
     const path = location.pathname
@@ -28,6 +44,10 @@ const Navbar = () => {
         }
     }
 
+    const currentLanguageCode = cookies.get('i18next') || 'tr'
+    const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
+    const { t } = useTranslation()
+
     const [sticky, setSticky] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll", isSticky);
@@ -47,6 +67,11 @@ const Navbar = () => {
         const scrollTop = window.scrollY;
         scrollTop >= 141 ? setSticky(true) : setSticky(false);
     }
+    
+    useEffect(() => {
+        console.log('Setting page stuff')
+        document.body.dir = currentLanguage.dir || 'ltr'
+      }, [currentLanguage, t])
 
   return (
     <>
@@ -58,14 +83,56 @@ const Navbar = () => {
                             <div className="topbar__social">
                                 <Link to="https://www.linkedin.com/company/eksperendustriyel/" rel="noreferrer" target="_blank" className="fab fa-linkedin"></Link>
                             </div>
-                            <Link to="/faqs">SSS</Link>
-                        </div>
-
-                        <div className="topbar__right">
-                             
+                            <Link to="/faqs">{t('faq')}</Link>
+                            </div>
+                            <div className="topbar__right">
                             <Link to="mailto:info@eksperendüstriyel.com.tr"><i className="pylon-icon-email1"></i>info@eksperendüstriyel.com.tr</Link>
-                            <Link to="#"><i className="pylon-icon-clock2"></i>Pazartesi - Cuma 08:00 / 19:00</Link>
-                        </div>
+                            <Link to="#"><i className="pylon-icon-clock2"></i>{t('workday')}</Link>
+                            
+                            <div className="language-select">
+                            <div className="d-flex justify-content-end align-items-center language-select-root">
+                              <div className="dropdown">
+                                <button
+                                  className="btn btn-link dropdown-toggle"
+                                  type="button"
+                                  id="dropdownMenuButton1"
+                                  data-bs-toggle="dropdown"
+                                  aria-expanded="false"
+                                >
+    
+                                {currentLanguageCode}
+    
+                                </button>
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li>
+                                    <span className="dropdown-item-text">{t('language')}</span>
+                                  </li>
+                                  {languages.map(({ code, name,country_code }) => (
+                                    <li key={country_code}>
+                                      <a
+                                        href="#"
+                                        className={('dropdown-item', {
+                                          disabled: currentLanguageCode === code,
+                                        })}
+                                        onClick={() => {
+                                          i18next.changeLanguage(code)
+                                        }}
+                                      >
+                                        <span
+                                        className={`flag-icon flag-icon-${country_code} mx-2`}
+                                          style={{
+                                            opacity: currentLanguageCode === code ? 0.5 : 1,
+                                          }}
+                                        ></span>
+                                       {name}
+                                      </a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div> 
                     </div>
                 </div>
                 <nav className={`main-menu ${sticky && "stricky-header stricked-menu stricky-fixed"}`}>
@@ -76,24 +143,24 @@ const Navbar = () => {
                         </div>
                         <ul className="main-menu__list">
                             <li className={`dropdown ${menu.home && "current"}`}>
-                                <Link to="/">Anasayfa</Link>
+                                <Link to="/">{t('home')}</Link>
                                 
                             </li>
-                            <li className={`dropdown ${menu.about && "current"}`}><Link to="/about">Hakkımızda</Link> </li>
-                            <li className={`dropdown ${menu.service && "current"}`}><Link to="/service">Hizmetler</Link>
+                            <li className={`dropdown ${menu.about && "current"}`}><Link to="/about">{t('about')}</Link> </li>
+                            <li className={`dropdown ${menu.service && "current"}`}><Link to="/service">{t('services')}</Link>
 
                             </li>
 
-                            <li className={`dropdown ${menu.pages && "current"}`}><Link to="/testimonial">Referanslar</Link>
+                            <li className={`dropdown ${menu.pages && "current"}`}><Link to="/testimonial">{t('testimonial')}</Link>
                             </li>
-                            <li className={`dropdown ${menu.contact && "current"}`}><Link to="/contact">İletişim</Link></li>
+                            <li className={`dropdown ${menu.contact && "current"}`}><Link to="/contact">{t('contact')}</Link></li>
                         </ul>
 
                         <div className="main-header__info">
                             <div className="main-header__info-phone">
                                 <i className="pylon-icon-tech-support"></i>
                                 <div className="main-header__info-phone-content">
-                                    <span>İstediğiniz Zaman Arayın</span>
+                                    <span>{t('collanytime')}</span>
                                     <h3><Link to="tel:+905559949808">0 555 994 98 08</Link></h3>
                                 </div>
                             </div>
@@ -114,21 +181,21 @@ const Navbar = () => {
                 <div  className="mobile-nav__container">
                     <ul className="main-menu__list">
 
-                        <li><Link to="/" onClick={() => setmobile(false)}>Anasayfa</Link></li>
+                        <li><Link to="/" onClick={() => setmobile(false)}>{t('home')}</Link></li>
                         <li>
-                        <Link to="/about" onClick={() => setmobile(false)}>Hakkımızda</Link>
+                        <Link to="/about" onClick={() => setmobile(false)}>{t('about')}</Link>
                         </li>
 
                         <li>
-                        <Link to="/service-details" onClick={() => setmobile(false)}>Hizmetler</Link> 
+                        <Link to="/service-details" onClick={() => setmobile(false)}>{t('services')}</Link> 
                         </li>
 
                         <li>
-                        <Link to="/testimonial" onClick={() => setmobile(false)}>Referanslar</Link>
+                        <Link to="/testimonial" onClick={() => setmobile(false)}>{t('testimonial')}</Link>
                         </li>
 
                         <li>
-                            <Link to="/contact" onClick={() => setmobile(false)}>İletişim</Link>
+                            <Link to="/contact" onClick={() => setmobile(false)}>{t('contact')}</Link>
                         </li>
                     </ul>
                 </div>
@@ -145,12 +212,49 @@ const Navbar = () => {
                 </ul>
                 <div  className="mobile-nav__top">
                     <div  className="mobile-nav__language">
-                        <img src={flagtr} alt=""/>
-                        <label  className="sr-only" htmlFor="language-select">Dil seçin</label>
-                        <select  className="selectpicker" id="language-select">
-                            <option value="tr">Türkçe</option>
-                            <option value="en">English</option>
-                        </select>
+                    <div className="language-select">
+                    <div className="d-flex justify-content-end align-items-center language-select-root">
+                      <div className="dropdown">
+                        <button
+                          className="btn btn-link dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+
+                        {currentLanguageCode}
+
+                        </button>
+                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li>
+                            <span className="dropdown-item-text">{t('language')}</span>
+                          </li>
+                          {languages.map(({ code, name, country_code,flag }) => (
+                            <li key={country_code}>
+                              <a
+                                href="#"
+                                className={('dropdown-item', {
+                                  disabled: currentLanguageCode === code,
+                                })}
+                                onClick={() => {
+                                  i18next.changeLanguage(code)
+                                }}
+                              >
+                                <span
+                                className={`${flag} mx-3`}
+                                  style={{
+                                    opacity: currentLanguageCode === code ? 0.5 : 1,
+                                  }}
+                                ></span>
+                                {name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                     </div>
                     <div  className="mobile-nav__social">
                     <Link to="https://www.linkedin.com/company/eksperendustriyel/" rel="noreferrer" target="_blank" className="fab fa-linkedin"></Link>

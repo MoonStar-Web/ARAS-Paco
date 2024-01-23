@@ -13,15 +13,19 @@ import Business from './Mehhometwo/Business';
 import Clint from './Menhome/Clint';
 import { Helmet } from "react-helmet";
 
+
 const Main = () => {
-   
+
+
+
   return (
     <>
+
     <Helmet>
     <title>Anasayfa || ENDUSTRIYEL EKSPER</title>
     <meta name='description' content='Eksper,Endüstriyel,Etüd ve Ambalaj Tasarım Anasayfa'/>
     </Helmet>
-    
+
         <Sliderone/>
         <Quick/>
         <Offering/>

@@ -1,6 +1,11 @@
 {
-    "app_title": "Title",
-    "language": "Language",
-    "welcome_message": "Welcome",
-    "days_since_release": "it's been {{number_of_days}} days since this video was released"
-  }
+  "language": "language",
+  "faq":"FAQ",
+  "workday":"Mon - Sat 8:00 AM - 7:00 PM",
+  "home":"Home",
+  "about":"About",
+  "services":"Services",
+  "testimonial":"Testimonial",
+  "contact":"Contact",
+  "collanytime":"COLL ANYTIME"
+}
