@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Sliderone from './Menhome/Sliderone'
 import Offering from './Menhome/Offering';
@@ -12,17 +11,17 @@ import Video from './Mehhometwo/Video';
 import Business from './Mehhometwo/Business';
 import Clint from './Menhome/Clint';
 import { Helmet } from "react-helmet";
-
+import { useTranslation } from 'react-i18next';
 
 const Main = () => {
 
-
+  const { t } = useTranslation()
 
   return (
     <>
 
     <Helmet>
-    <title>Anasayfa || ENDUSTRIYEL EKSPER</title>
+    <title>{t('pagehometitle')}</title>
     <meta name='description' content='Eksper,Endüstriyel,Etüd ve Ambalaj Tasarım Anasayfa'/>
     </Helmet>
 

@@ -2,15 +2,18 @@ import React from 'react'
 import Bradcom from '../../Bradcom/Main'
 import First from './Menteamdeatils/First'
 import { Helmet } from 'react-helmet'
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation()
+
   return (
     <>
     <Helmet>
-    <title>Hakkımızda || ENDUSTRIYEL EKSPER</title>
+    <title>{t('pagetitleabout')} </title>
     <meta name='description' content='Eksper,Endüstriyel,Etüd ve Ambalaj Tasarım Hakkimizda Sayfasi'/>
     </Helmet>   
-    <Bradcom title={"Anasayfa"} subtitle={"Hakkımızda"} common={"Biz kimiz?"}/>
+    <Bradcom title={t('home')} subtitle={t('about')} common={t('pageheaderabout')}/>
         
         <First/>
         

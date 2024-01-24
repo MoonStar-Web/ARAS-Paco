@@ -3,6 +3,7 @@ import { initReactI18next } from "react-i18next";
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import 'bootstrap/dist/js/bootstrap.js';
+import './assets/css/flag-icon-css/css/flag-icons.css';
 
 
 i18n
