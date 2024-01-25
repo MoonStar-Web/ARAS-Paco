@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

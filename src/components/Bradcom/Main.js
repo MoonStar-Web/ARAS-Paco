@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link}  from 'react-router-dom'
 import React from 'react'
 import PHBG1 from '../../assets/images/backgrounds/page-header-bg-1-1.jpg'
