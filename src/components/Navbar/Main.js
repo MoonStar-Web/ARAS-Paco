@@ -11,12 +11,12 @@ const Navbar = () => {
 
     const languages = [
         {
-          code: 'TR',
+          code: 'tr',
           name: 'Türkçe',
           country_code: 'tr', 
         },
         {
-          code: 'EN',
+          code: 'en',
           name: 'English',
           country_code: 'gb',
         },
@@ -35,7 +35,7 @@ const Navbar = () => {
             setmenu({ service: true })
         } 
         else if (path === "/testimonial") {
-            setmenu({ service: false })
+            setmenu({ testimonial: true })
         } 
         else if(path === "/contact"){
             setmenu({contact: true})
@@ -74,6 +74,7 @@ const Navbar = () => {
         document.body.dir = currentLanguage.dir || 'ltr'
       }, [currentLanguage, t])
 
+      // eslint-disable-next-line react/prop-types
       const GlobeIcon = ({ width = 24, height = 24 }) => (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +125,7 @@ const Navbar = () => {
                                   {languages.map(({ code, name,country_code }) => (
                                     <li key={country_code}>
                                       <a
-                                        href="#"
+                                        href="/"
                                         className={('dropdown-item', {
                                           disabled: currentLanguageCode === code,
                                         })}
@@ -165,7 +166,7 @@ const Navbar = () => {
 
                             </li>
 
-                            <li className={`dropdown ${menu.pages && "current"}`}><Link to="/testimonial">{t('testimonial')}</Link>
+                            <li className={`dropdown ${menu.testimonial && "current"}`}><Link to="/testimonial">{t('testimonial')}</Link>
                             </li>
                             <li className={`dropdown ${menu.contact && "current"}`}><Link to="/contact">{t('contact')}</Link></li>
                         </ul>
@@ -244,7 +245,7 @@ const Navbar = () => {
                           <li>
                             <span className="dropdown-item-text">{t('language')}</span>
                           </li>
-                          {languages.map(({ code, name, country_code,flag }) => (
+                          {languages.map(({ code, name, country_code}) => (
                             <li key={country_code}>
                               <a
                                 href="#"

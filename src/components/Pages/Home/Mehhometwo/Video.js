@@ -21,12 +21,12 @@ function Video() {
             {ytShow &&
                 <>
                     <div className="mfp-bg mfp-fade mfp-ready" style={{ height: '7617px', position: 'absolute' }}></div>
-                    <div className="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-fade mfp-ready" tabindex="-1" style={{ top: '3300px', position: 'absolute', height: '590px' }}>
+                    <div className="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-fade mfp-ready" tabIndex="-1" style={{ top: '3300px', position: 'absolute', height: '590px' }}>
                         <div className="mfp-container mfp-s-ready mfp-iframe-holder">
                             <div className="mfp-content">
                                 <div className="mfp-iframe-scaler">
                                     <button title="Close (Esc)" type="button" className="mfp-close" onClick={() => setytShow(false)}>x</button>
-                                    <iframe className="mfp-iframe" src="//www.youtube.com/embed/fKjTmTVqnG8?autoplay=1" frameborder="0" allowFullScreen=""></iframe>
+                                    <iframe title='myFrame' className="mfp-iframe" src="//www.youtube.com/embed/fKjTmTVqnG8?autoplay=1" frameBorder="0" allowFullScreen=""></iframe>
                                 </div>
                             </div>
                             <div className="mfp-preloader">Loading...</div>

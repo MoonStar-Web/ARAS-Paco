@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom"
 import Routing from './routes';
 import './assets/css/animate.min.css' 
@@ -11,13 +12,14 @@ import './assets/css/nouislider.pips.css'
 import './assets/css/odometer.min.css'
 import './assets/css/pylon-icons.css'
 import './assets/css/swiper.min.css'
+import BackButton from "./utils/BackButton";
 
 
 export default function App() {
   return (
     <Router>
       <Routing />
+      <BackButton />
     </Router>
   );
 }
-
