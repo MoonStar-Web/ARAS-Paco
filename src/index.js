@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './i18n';
-import suspense from './assets/images/suspense.svg';
+import suspense from './assets/images/suspense.gif';
 
 const loadingMarkup = (
   <div className='py-4 text-center'>
