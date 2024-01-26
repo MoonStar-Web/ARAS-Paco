@@ -1,13 +1,15 @@
 import React, { Suspense } from 'react';
+import { Link }  from 'react-router-dom'
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './i18n';
+import logo from '../../assets/images/logo-dark.svg';
 
 const loadingMarkup = (
   <div className='py-4 text-center'>
-  <h3>Loading...</h3>
+   <Link aria-label="suspense"><img src={suspense}  alt="Endüstriyel Eksper"/></Link>
   </div>
 )
 
