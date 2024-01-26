@@ -5,11 +5,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './i18n';
-import logo from '../../assets/images/logo-dark.svg';
+import suspense from './assets/images/suspense.svg';
 
 const loadingMarkup = (
   <div className='py-4 text-center'>
-   <Link aria-label="suspense"><img src={suspense}  alt="Endüstriyel Eksper"/></Link>
+   <Link to="#" aria-label="suspense"><img src={suspense} alt="Endüstriyel Eksper" /></Link>
   </div>
 )
 
