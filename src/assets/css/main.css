@@ -1,10 +1,10 @@
 /*
-  Theme Name: Pylon - Loan & Finance Company React Template
-  Theme URL: https://mediacity.co.in/pylon/
+  Theme Name: Aras - Company React Template
+  Theme URL: https://moonstar-web.com/
   Author: Mediacity
-  Author URI: https://themeforest.net/user/media-city
-  Creation Date: 06 October 2022
-  Description: A default stylesheet for Pylon - Loan & Finance Company React Template.
+  Author URI: 
+  Creation Date: 18 October 2024
+  Description: A default stylesheet for Aras - Company React Template.
   Version: 1.1
 */
 
@@ -479,6 +479,21 @@
   }
 }
 
+.slider {
+background-position: top center;
+border-radius: 5rem;
+}
+
+.con-accordion {
+  position: top center;
+  padding-left: 70px;
+  padding-top: 20px;
+  padding-right: 70px;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 11;
+
+}
 .team-3-col {
   display: grid;
   grid-template-columns: 1fr;
@@ -3266,6 +3281,15 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# navbar shape
+--------------------------------------------------------------*/
+.aras-navbar {
+  padding-top: 0px;
+  background-image: url(../images/shapes/testimonials-map-1-1.png);
+  background-position:  top center;
+}
+
+/*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials-one {
@@ -3439,15 +3463,19 @@ h6 {
 
 .why-choose .container {
   position: relative;
+  background-repeat: inherit;
+  background-image: top left;
 }
 
 .why-choose__image {
   position: relative;
+  background-position: right;
 }
 
 .why-choose__image > img {
   position: relative;
-  border-radius: 4px;
+  border-radius: 8px;
+
 }
 
 @media (max-width: 1199px) {
@@ -4301,6 +4329,15 @@ h6 {
   z-index: 10;
 }
 
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+.gallery-one {
+  padding-top: 75px;
+  position: relative;
+  z-index: 10;
+}
+
 @media (max-width: 991px) {
   .service-one {
     margin-bottom: 0;
@@ -4315,7 +4352,7 @@ h6 {
 }
 
 .service-one__card {
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 @media (max-width: 991px) {
@@ -4326,8 +4363,8 @@ h6 {
 
 .service-one__image {
   overflow: hidden;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   background-color: var(--thm-black);
 }
 
@@ -5762,8 +5799,8 @@ h6 {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 1199px) {
