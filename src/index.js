@@ -7,7 +7,7 @@ import './i18n';
 
 
 const loadingMarkup = (
-  <div className='py-5 text-center'>
+  <div className='py-4 text-center'>
    <h3>Loading...</h3>
   </div>
 )
