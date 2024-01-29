@@ -1,0 +1,34 @@
+{
+  "__NAVBAR__":"Navbar için çeviri.",
+    "language": "Seçenekler",
+    "faq":"SSS",
+    "workday":"Pazartesi - Cuma 08:00 / 19:00",
+    "home":"Anasayfa",
+    "about":"Hakkımızda",
+    "services":"Hizmetler",
+    "testimonial":"Referanslar",
+    "contact":"İletişim",
+    "collanytime":"İSTEDIĞINIZ ZAMAN ARAYIN",
+
+    "__PAGEHEADER__":"Page headerlar için çeviri",
+    "pagehometitle":"Anasayfa || EKSPER ENDUSTRIYEL",
+    "pagetitleabout":"Hakkımızda || EKSPER ENDUSTRIYEL",
+    "pageheaderabout":"Biz kimiz?",
+    "pagetitleservice":"Hizmetler || EKSPER ENDUSTRIYEL",
+    "pageheaderservice":"Yetkinliklerimiz",
+    "pagetitletestimonial":"Referanslar || EKSPER ENDUSTRIYEL",
+    "pageheadertertimonial":"Görüşler",
+    "pagetitlecontact":"İletişim|| EKSPER ENDUSTRIYEL",
+    "pageheadercontact":"Bize Ulaşın",
+
+    "__FOOTER__":"Footer için çeviri",
+    "footerArticle":"Makale",
+    "fooDiscover":"Keşfedin",
+    "fooabout":"Hakkımızda",
+    "fooservice":"Hizmetlerimiz",
+    "footestimonial":"Referanslar",
+    "foofaq":"SSS",
+    "foocontact":"İletişim",
+    "fooCopyright":"© Copyright 2023 Eksper Endüstriyel. Her hakkı saklıdır!"
+
+  }

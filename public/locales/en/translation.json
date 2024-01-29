@@ -1,0 +1,34 @@
+{
+  "__NAVBAR__":"Navbar için çeviri.",
+    "language": "Options",
+    "faq":"FAQ",
+    "workday":"Mon - Sat 8:00 AM - 7:00 PM",
+    "home":"Home",
+    "about":"About",
+    "services":"Services",
+    "testimonial":"Testimonial",
+    "contact":"Contact",
+    "collanytime":"COLL ANYTIME",
+
+  "__PAGEHEADER__":"Page headerlar için çeviri",
+    "pagehometitle":"Home || EXPER INDUSTRIAL",
+    "pagetitleabout":"About Us || EXPER INDUSTRIAL",
+    "pageheaderabout":"Who are us?",
+    "pagetitleservice":"Services || EXPER INDUSTRIAL",
+    "pageheaderservice":"Our Competencies",
+    "pagetitletestimonial":"Testimonial || EXPER INDUSTRIAL",
+    "pageheadertertimonial":"Opinions",
+    "pagetitlecontact":"Contact | EXPER INDUSTRIAL",
+    "pageheadercontact":"Contact Us",
+
+  "__FOOTER__":"Footer için çeviri",
+    "footerArticle":"Article",
+    "fooDiscover":"Discover",
+    "fooabout":"About Us",
+    "fooservice":"Services",
+    "footestimonial":"Testimonial",
+    "foofaq":"FAQs",
+    "foocontact":"Contact",
+    "fooCopyright":"© Copyright 2023 Exper Endüstriyel. All rights reserved!"
+
+}
